@@ -28,7 +28,7 @@ function handleSubmit(event) {
 }
 
   return (
-    <div className="font-mono bg-white">
+    <div className="font-mono bg-white mx-4">
       <div className="">
         <form onSubmit={handleSubmit} className="mt-4">
         <div className="text-center text-3xl">
@@ -48,7 +48,7 @@ function handleSubmit(event) {
             </div>
         </form>
       </div>
-      <div className="grid flex grid-cols-4">
+      <div className="grid flex grid-cols-2 md:grid-cols-4">
 
       {result? result.map(book => (
           <div key={book.volumeInfo.infoLink} className="flex flex-grow">

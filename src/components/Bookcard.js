@@ -2,7 +2,7 @@ import React from 'react'
 
 const Bookcard = ({thumbnail, title, author, publisher, alt, link}) => {
     return (
-        <div className="w-full text-gray-dark bg-gray-light m-4 p-4 rounded-xl">
+        <div className="w-full sm:text-sm text-gray-dark bg-gray-light m-4 p-4 rounded-xl">
 
 
         <a className="mr-4" href={link}>
