@@ -8,7 +8,7 @@ function App() {
 
   const [book, setBook] = useState("");
   const [result, setResult] = useState([]);
-  const [apiKey] = useState(process.env.API_KEY);
+  const [apiKey] = useState(`${process.env.API_KEY}`);
 
   function handleChange(event) {
     const book = event.target.value;
