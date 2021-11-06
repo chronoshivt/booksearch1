@@ -4,11 +4,14 @@ import axios from 'axios';
 import Bookcard from './components/Bookcard';
 import noImg from './components/noImg.png'
 
-function App() {
+//API key environment variable
+import env from "react-dotenv";
 
+function App() {
   const [book, setBook] = useState("");
   const [result, setResult] = useState([]);
-  const [apiKey] = useState(`${process.env.API_KEY}`);
+  //Loading API key
+  const [apiKey] = useState(env.API_KEY);
 
   function handleChange(event) {
     const book = event.target.value;
@@ -16,6 +19,7 @@ function App() {
     setBook(book);
   }
 
+//Submits search
 function handleSubmit(event) {
 
   event.preventDefault();
@@ -49,7 +53,7 @@ function handleSubmit(event) {
         </form>
       </div>
       <div className="grid flex grid-cols-2 md:grid-cols-4">
-
+      {/* Renders search results by mapping and creating card component for each books */}
       {result? result.map(book => (
           <div key={book.volumeInfo.infoLink} className="flex flex-grow">
           <Bookcard
