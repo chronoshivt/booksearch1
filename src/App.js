@@ -8,7 +8,7 @@ function App() {
 
   const [book, setBook] = useState("");
   const [result, setResult] = useState([]);
-  const [apiKey] = useState("AIzaSyDL0UBmLlpzt2Qj5dJJqyS8nc9KdkcyL8M");
+  const [apiKey] = useState(process.env.API_KEY);
 
   function handleChange(event) {
     const book = event.target.value;
@@ -35,7 +35,7 @@ function handleSubmit(event) {
           Search for books on Google
         </div>
             <div className="flex justify-center mt-12">
-              <input className="border-4 
+              <input className="border-4 p-2 rounded-lg
               border-gray-dark" 
               type="text" 
               placeholder="Search for Books"
